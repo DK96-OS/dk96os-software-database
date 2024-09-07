@@ -1,17 +1,4 @@
-pluginManagement {
-	plugins {
-		id "org.jetbrains.kotlin.jvm" version "1.9.21"
-	}
-	repositories {
-		google()
-	    maven {
-			url = "https://plugins.gradle.org/m2/"
-		}
-	    mavenCentral()
-	    gradlePluginPortal()
-	}
-}
-rootProject.name = "java-project"
+rootProject.name = "dk96os-software-database"
 include(
-	//todo: Add each ":module",
+	":app",
 )

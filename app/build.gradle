@@ -1,0 +1,31 @@
+plugins {
+    id 'io.micronaut.application' version '4.4.2'
+    id 'com.gradleup.shadow' version '8.3.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+micronaut {
+    version "4.4.2"
+}
+
+dependencies {
+    implementation 'info.picocli:picocli:4.7.6'
+}
+
+application {
+    mainClass = "dk96os.swdb.SoftwareDatabase"
+}
+
+jar {
+    destinationDirectory.set(file("$buildDir/jar"))
+    manifest.attributes["Main-Class"] = "dk96os.swdb.SoftwareDatabase"
+}
